@@ -48,4 +48,3 @@ As this assignment is not too complex and I have previously implemented some of 
 <br />
 
 Also I estimated  “Item 13 - Implement Method to Retrieve All Student's Grades and Display Standard Deviation of Grades” with a Point Estimation of “3” as I am unsure how this will pan out. In contrast “Item 14 - Implement Method to Retrieve All Student's Grades and Display Max / Min Grade” with a Point Estimation of “1” should not take too long as this should be a simple call of Max/Min to the ArrayList items. 
-
