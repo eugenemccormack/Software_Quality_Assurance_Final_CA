@@ -69,21 +69,23 @@ public class Controller {
 		
 	}
 	
-	
-	public void Exit() {
-		
-		System.out.println("Exit");
-		
-		Menu();
-		
-	}
-	public void Summary() {
+	public void CreateNewRubtic() {
 
-		System.out.println("Summary");
+		System.out.println("CreateNewRubtic");
 		
 		Menu();
 		
 	}
+	
+	public void ViewAllRubrics() {
+		
+		System.out.println("ViewAllRubrics");
+		
+		Menu();
+		
+	}	
+
+
 	private void ViewRubricName() {
 		
 		System.out.println("ViewRubricName");
@@ -92,16 +94,20 @@ public class Controller {
 		
 		
 	}
-	public void ViewAllRubrics() {
-		
-		System.out.println("ViewAllRubrics");
+
+	
+	public void Summary() {
+
+		System.out.println("Summary");
 		
 		Menu();
 		
 	}
-	public void CreateNewRubtic() {
 
-		System.out.println("CreateNewRubtic");
+	
+	public void Exit() {
+		
+		System.out.println("Exit");
 		
 		Menu();
 		
