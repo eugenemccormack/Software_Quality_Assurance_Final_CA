@@ -160,7 +160,11 @@ public class Controller {
 	public void ViewAllRubrics() {
 		
 		
-		System.out.println("ViewAllRubrics");
+		System.out.println("| View All Rubric's |\n");
+		
+		for(Subject subjectName: subjects)
+		
+		System.out.println("Rubric Subject : " + subjectName.getSubjectName() + "\n");
 		
 		Menu();
 		
