@@ -1,8 +1,13 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Controller {
 	
-	Scanner scan = new Scanner(System.in);
+	private final Scanner scan = new Scanner(System.in);
+	
+	private final ArrayList<Rubric> rubrics = new ArrayList<>(); 
+	private final ArrayList<Student> students = new ArrayList<>(); 
+	private final ArrayList<Subject> subjects = new ArrayList<>(); 
 
 	
 	public Controller() {
@@ -34,10 +39,11 @@ public class Controller {
 		System.out.println("\nPlease enter a Menu Number : ");
 		
 		
-		do {
-		
+		do {	
+			
 		
 		option = scan.nextInt();
+
 		
 		if(option < 1 || option > 5) {
 			
@@ -48,9 +54,13 @@ public class Controller {
 			
 		}
 		
+		
+		
+
+		
 		switch(option) {
 		
-		case 1 : CreateNewRubtic();
+		case 1 : CreateNewRubric();
 		
 		case 2 : ViewAllRubrics();
 		
@@ -63,21 +73,92 @@ public class Controller {
 		
 		}
 		
+
+		
 		}while(option <1 && option >5);
 		
 		
 		
 	}
 	
-	public void CreateNewRubtic() {
-
-		System.out.println("CreateNewRubtic");
+	public void CreateNewRubric() {
+		
+		System.out.println("\n| Create New Rubric |");
+		
+		ArrayList<Rubric> subjectRubric = new ArrayList<>(); 	
+		
+		int criteriaRows = 0;
+		int grade = 0;
+		
+		
+		System.out.println("\nPlease Enter Students Name : ");
+		
+		String name = scan.next();
+		
+		System.out.println("\nPlease Enter Students Number : ");
+		
+		String studentNumber = scan.next();
+		
+		System.out.println("\nPlease Enter the Subject : ");
+		
+		String subjectName = scan.next();
+		
+		do {
+			
+			System.out.println("\nPease Enter the Number of Criteria's You Would Like to Create for " + subjectName + "?");			
+			
+			criteriaRows = scan.nextInt();
+			
+			if(criteriaRows < 1 || criteriaRows > 10)
+				
+				System.out.println("\nError - The Criteria Can Only be Between 1 and 10 Columns");
+			
+			
+		}while(criteriaRows < 1 || criteriaRows > 10);
+		
+		for(int i = 0; i < criteriaRows; i++) {
+			
+			System.out.println("\nPlease Enter the Criteria Name : ");		
+			
+			String criteriaName = scan.next();
+			
+			do {
+			
+			System.out.println("\nPlease Enter a Grade : ");
+			
+			grade = scan.nextInt();
+			
+			if(grade < 1 || grade > 5) 
+				
+				System.out.println("Error - Please Enter a Grade Between 1 and 5");				
+			
+			
+			}while(grade < 1 || grade > 5);
+			
+			Rubric rubric = new Rubric(criteriaName, grade);
+									
+			rubrics.add(rubric);
+			
+			subjectRubric.add(rubric);
+			
+		}		
+		
+		
+		Subject subject = new Subject(subjectName, subjectRubric);
+		
+		subjects.add(subject);
+		
+		
+		Student student = new Student(name, studentNumber, subject);
+		
+		students.add(student);		
 		
 		Menu();
 		
 	}
 	
 	public void ViewAllRubrics() {
+		
 		
 		System.out.println("ViewAllRubrics");
 		
