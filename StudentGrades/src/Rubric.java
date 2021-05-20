@@ -4,6 +4,11 @@ public class Rubric {
 	private String criteriaName;
 	private int grade;
 	
+	public Rubric() {
+		
+		
+	}
+	
 	public Rubric(String criteriaName, int grade) {
 		
 		this.criteriaName = criteriaName;
