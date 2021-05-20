@@ -8,10 +8,7 @@ public class Controller {
 	public Controller() {
 		
 		
-		Menu();
-		
-		
-		
+		Menu();		
 		
 		
 	}
