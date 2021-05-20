@@ -6,6 +6,11 @@ public class Subject {
 	private String subjectName;
 	private ArrayList <Rubric> rubric;
 	
+	public Subject() {
+		
+		
+	}
+	
 	public Subject(String subjectName, ArrayList <Rubric> rubric) {
 		
 		this.subjectName = subjectName;

@@ -5,6 +5,11 @@ public class Student {
 	private String studentNumber;
 	private Subject subject;
 	
+	public Student() {
+		
+		
+	}
+	
 	
 	public Student(String name, String studentNumber, Subject subject) {
 		
