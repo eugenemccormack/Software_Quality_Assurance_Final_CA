@@ -5,9 +5,11 @@ public class Student {
 	private String studentNumber;
 	private Subject subject;
 	
-	public Student(String name, Subject subject) {
+	
+	public Student(String name, String studentNumber, Subject subject) {
 		
 		this.name = name;
+		this.studentNumber = studentNumber;
 		this.subject = subject;
 		
 	}
