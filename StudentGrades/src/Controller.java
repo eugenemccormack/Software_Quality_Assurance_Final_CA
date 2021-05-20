@@ -37,7 +37,7 @@ public class Controller {
 		
 		
 		
-		System.out.println("\nPlease enter a Menu Number : ");
+		System.out.println("\nPlease enter a Menu Option Number : ");
 		
 		
 		do {	
@@ -170,7 +170,7 @@ public class Controller {
 		Menu();
 		
 	}	
-
+	
 
 	private void ViewRubricName() {
 		
