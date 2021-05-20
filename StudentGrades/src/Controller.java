@@ -29,9 +29,10 @@ public class Controller {
 		
 		System.out.println("1. Create New Student Rubric");
 		System.out.println("2. View All Rubric's");
-		System.out.println("3. View Grades Associated with a Specific Rubric");
-		System.out.println("4. View Summary of Student's Grades");
-		System.out.println("5. Exit System");
+		System.out.println("3. Find Rubric by Name");
+		System.out.println("4. View Grades Associated with a Specific Rubric");
+		System.out.println("5. View Summary of Student's Grades");
+		System.out.println("6. Exit System");
 		
 		
 		
@@ -173,7 +174,28 @@ public class Controller {
 
 	private void ViewRubricName() {
 		
-		System.out.println("ViewRubricName");
+		boolean found = false;
+		
+		System.out.println("| Find Rubric |\n");
+		
+		System.out.println("Please Enter a Subject : \n");
+		
+		String name = scan.next();
+		
+		for(Subject subjectName: subjects) {
+			
+			if(subjectName.getSubjectName().equalsIgnoreCase(name)) {
+				
+				found = true;
+		
+		System.out.println("\nRubric Found : " + subjectName.getSubjectName() + "\n");
+			
+			}		
+		}
+		
+		if(!found)
+			
+			System.out.println("\nError - Subject " + name + " was Not Found\n");
 		
 		Menu();
 		
