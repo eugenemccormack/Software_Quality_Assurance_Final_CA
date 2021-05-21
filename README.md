@@ -109,5 +109,33 @@ The following are links to examples of how I utilised EclEmma before Commits to 
 
 <br/>
 
+---
+## <center> Team Version-Control  </center>
+---
+
+<br/>
+
+As part of the Version-Control process I created a Branch for every new feature for the assignment. Before working on a new feature I would checkout the Develop Branch, Pull from the Develop Branch to ensure I have the most up-to-date code / enhancements and then create a new Branch off the Develop Branch for my feature. This ensured I was working on a newly created Branch that would not affect the Develop Branch when Pushing and helped to organise the project setup.
+
+<br/>
+
+After completion of the new feature I would Test, Save, Stage, Commit with an explanation of my work and then Push via Eclipse. 
+
+<br/>
+
+This would then create a Pull Request via GitHub of which I would assign it to be Merged into the Develop Branch upon review. 
+
+<br/>
+
+The following is a link to all the Branches I created:
+
+<br/>
+
+* [GitHub Branches](https://github.com/eugenemccormack/Software_Quality_Assurance_Final_CA/branches/all)
+
+<br/>
+
+
+
 
 
