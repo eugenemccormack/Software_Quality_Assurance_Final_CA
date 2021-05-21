@@ -50,12 +50,36 @@ Velocity is a team metric and should only consider the team’s performance and 
 ## <center> Story Point Reasoning </center>
 ---
 
-<br />
+<br/>
 
 As this assignment is not too complex and I have previously implemented some of the above features in past projects this allowed me to provide these estimations. I estimated "Item 5" above "Create Test for Method to Create New Rubric" with a Point Estimation of "3" as I have only conducted a few JUnit tests previously. I expect “Item 5” to take longer than "Item 4 - "Implement Method to Create New Rubric" with a Point Estimation of "2" as I have previously implanted this feature before and am confident this should not take as long. I suspect the main tasks that will take the longest are the tasks that I am somewhat unfamiliar with e.g. Testing.
 
-<br />
+<br/>
 
 Also I estimated  “Item 13 - Implement Method to Retrieve All Student's Grades and Display Standard Deviation of Grades” with a Point Estimation of “3” as I am unsure how this will pan out. In contrast “Item 14 - Implement Method to Retrieve All Student's Grades and Display Max / Min Grade” with a Point Estimation of “1” should not take too long as this should be a simple call of Max/Min to the ArrayList items / Collections. 
 
 <br/>
+
+---
+## <center> Unit Testing and Test-Driven Development </center>
+---
+
+<br/>
+
+A number of tests were completed over the course of this assignment relating to the creation of classes and tests for these classes to ensure they were functioning correctly. I also conducted tests for all the calculations for the Students Grading Summary. These tests proved useful as they allowed me to fully test the methods implemented for the calculations. 
+
+<br/>
+
+The following is a [Link](https://github.com/eugenemccormack/Software_Quality_Assurance_Final_CA/pull/19/files) to an example of a test conducted on Student Standard Deviation using Junit.
+
+<br/>
+
+A downside to the Standard Deviation Test Case was the fact that the user is required to input the "assertEquals" value e.g. what the result should be for the Test Case. This could be incorrectly inputted skewing the output for the Test Case. To combat this I used multiple online Standard Deviation Calculators to ensure the general consensus was correct. I noticed a lot of online Standard Deviation calculators only got the Variance, which is partially correct, but this is required to be Squared to get the Standard Deviation.
+
+<br/>
+
+The JUnit Test Case was useful as it helped me to identify errors within my code whilst calculating the Standard Deviation of which I made the correction after the Test Case Failed. After the correction the test Passed.
+
+<br/>
+
+
