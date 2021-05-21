@@ -82,4 +82,32 @@ The JUnit Test Case was useful as it helped me to identify errors within my code
 
 <br/>
 
+---
+## <center> Test Coverage Metric </center>
+---
+
+<br/>
+
+EclEmma Coverage Tool is a built in Plugin for Eclipse IDE which demonstrates the code been utilised when engaging test sequences via JUnit Test Cases. EclEmma Coverage Tool allows the user to identify redundant / errors within their deployment. EclEmma Coverage Tool is an extermimally powerful tool that can enable a coder to be more efficient with the deployment of Software.
+
+<br/>
+
+The following are links to examples of how I utilised EclEmma before Commits to ensure my code was functioning correctly and efficiently:
+
+<br/>
+
+* [Classes Coverage](https://github.com/eugenemccormack/Software_Quality_Assurance_Final_CA/pull/11)
+
+* [Average Grade Calculation Coverage](https://github.com/eugenemccormack/Software_Quality_Assurance_Final_CA/pull/15)
+
+* [Min / Max Grade Calculation Coverage](https://github.com/eugenemccormack/Software_Quality_Assurance_Final_CA/pull/16)
+
+* [Total Grade Calculation Coverage](https://github.com/eugenemccormack/Software_Quality_Assurance_Final_CA/pull/17)
+
+* [Standard Deviation Grade Calculation Coverage](https://github.com/eugenemccormack/Software_Quality_Assurance_Final_CA/pull/19)
+
+
+<br/>
+
+
 
