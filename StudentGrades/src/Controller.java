@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Controller {
@@ -13,9 +14,7 @@ public class Controller {
 	public Controller() {
 		
 		
-		//Menu();		
-
-		
+		Menu();			
 		
 		
 
@@ -282,6 +281,8 @@ public class Controller {
 							System.out.println("Student Number : " + student.getStudentNumber() + "\n");
 						
 							averageGrade(student.getSubject().getRubric());
+							maxGrade(student.getSubject().getRubric());
+							minGrade(student.getSubject().getRubric());
 					}
 				}
 			
@@ -311,6 +312,38 @@ public class Controller {
 			int average = total / rubrics.size();
 			
 			return average;
+						
+		}
+		
+		public int maxGrade(ArrayList<Rubric> rubrics){
+			
+			ArrayList<Integer> maximum = new ArrayList<>();
+			
+			for(Rubric rubric : rubrics) {
+				
+				maximum.add(rubric.getGrade());
+				
+			}
+			
+			System.out.println("Maximum Grade " + Collections.max(maximum) + "\n");		
+						
+			return Collections.max(maximum);
+						
+		}
+		
+		public int minGrade(ArrayList<Rubric> rubrics){
+			
+			ArrayList<Integer> minimum = new ArrayList<>();
+			
+			for(Rubric rubric : rubrics) {
+				
+				minimum.add(rubric.getGrade());
+				
+			}
+			
+			System.out.println("Minimum Grade " + Collections.min(minimum) + "\n");		
+						
+			return Collections.min(minimum);
 						
 		}
 	
