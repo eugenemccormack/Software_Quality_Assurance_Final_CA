@@ -135,6 +135,35 @@ The following is a link to all the Branches I created:
 
 <br/>
 
+---
+## <center> Code-Review Checklist  </center>
+---
+
+<br/>
+
+For every Pull Request I played Devil’s Advocate and commented on all the Pull Request Reviews stating changes that should be made before Merging into the Develop Branch.
+
+<br/>
+
+The following are example of this:
+
+* [23 Pull Requests](https://github.com/eugenemccormack/Software_Quality_Assurance_Final_CA/pulls?q=is%3Apr+is%3Aclosed)
+
+On Pull Request #6 I accidentally Merged into the Develop Branch instead of Menu Branch. This happen because I was working on the Develop Branch and forgot to Checkout to the newly created Branch "Menu".
+
+<br/>
+
+This caused major issues as I tried to "Revert" the Pull Request however because this Pull Request was not fully Staged it knocked the Branches out of Sync.
+
+<br/>
+
+To fix this issue I had to Reset -> Hard then Fetch & Rebase the Branch which corrected this issue and allowed me to Commit again successfully. 
+
+
+<br/>
+
+---
+
 
 
 
