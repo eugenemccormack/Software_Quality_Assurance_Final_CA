@@ -67,9 +67,11 @@ public class Controller {
 		
 		case 3: ViewRubricName();
 		
-		case 4: Summary();
+		case 4: ViewRubricGrades();
 		
-		case 5: Exit();
+		case 5: Summary();
+		
+		case 6: Exit();
 		
 		
 		}
@@ -82,6 +84,8 @@ public class Controller {
 		
 	}
 	
+
+
 	public void CreateNewRubric() {
 		
 		System.out.println("\n| Create New Rubric |");
@@ -158,72 +162,117 @@ public class Controller {
 		
 	}
 	
-	public void ViewAllRubrics() {
-		
-		
-		System.out.println("| View All Rubric's |\n");
-		
-		for(Subject subjectName: subjects)
-		
-		System.out.println("Rubric Subject : " + subjectName.getSubjectName() + "\n");
-		
-		Menu();
-		
-	}	
+		public void ViewAllRubrics() {
+			
+			
+			System.out.println("| View All Rubric's |\n");
+			
+			for(Subject subjectName: subjects)
+			
+			System.out.println("Rubric Subject : " + subjectName.getSubjectName() + "\n");
+			
+			Menu();
+			
+		}	
 	
 
-	private void ViewRubricName() {
-		
-		boolean found = false;
-		
-		System.out.println("| Find Rubric |\n");
-		
-		System.out.println("Please Enter a Subject : \n");
-		
-		String name = scan.next();
-		
-		for(Subject subjectName: subjects) {
+		private void ViewRubricName() {
 			
-			if(subjectName.getSubjectName().equalsIgnoreCase(name)) {
+			boolean found = false;
+			
+			System.out.println("| Find Rubric |\n");
+			
+			System.out.println("Please Enter a Subject : \n");
+			
+			String name = scan.next();
+			
+			for(Subject subjectName: subjects) {
 				
-				found = true;
-		
-		System.out.println("\nRubric Found : " + subjectName.getSubjectName() + "\n");
+				if(subjectName.getSubjectName().equalsIgnoreCase(name)) {
+					
+					found = true;
 			
-			}		
+					System.out.println("\nRubric Found : " + subjectName.getSubjectName() + "\n");
+				
+				}		
+			}
+			
+			if(!found)
+				
+				System.out.println("\nError - Subject " + name + " was Not Found\n");
+			
+			Menu();
+			
+			
 		}
-		
-		if(!found)
+	
+		private void ViewRubricGrades() {
 			
-			System.out.println("\nError - Subject " + name + " was Not Found\n");
-		
-		Menu();
-		
-		
-	}
+			boolean found = false;
+			
+			String subjectFound = "";
+			
+			System.out.println("Please Enter a Subject : \n");
+			
+			String name = scan.next();
+			
+			for(Subject subjectName: subjects) {
+				
+				if(subjectName.getSubjectName().equalsIgnoreCase(name)) {
+					
+					found = true;
+					
+					subjectFound = name;				
+				}					
+			}								
+					
+					for(Student student: students) {
+						
+						if(student.getSubject().getSubjectName().equalsIgnoreCase(subjectFound)) {
+							
+							System.out.println("\nStudent Name : " + student.getName());
+							System.out.println("Student Number : " + student.getStudentNumber() + "\n");
+						
+						for(int i = 0; i < student.getSubject().getRubric().size(); i++) {				
+												
+							System.out.println("Criteria : " + student.getSubject().getRubric().get(i).getCriteriaName());
+							System.out.println("Grade : " + student.getSubject().getRubric().get(i).getGrade() + "\n");														
+						}
+					}
+					}
+			
+			
+			if(!found)
+				
+				System.out.println("\nError - Subject " + name + " was Not Found\n");
+			
+			Menu();
+			
+			
+		}
 
 	
-	public void Summary() {
-
-		System.out.println("Summary");
-		
-		Menu();
-		
-	}
-
+		public void Summary() {
 	
-	public void Exit() {
+			System.out.println("Summary");
+			
+			Menu();
+			
+		}
+	
 		
-		System.out.println("Exit");
-		
-		Menu();
-		
-	}
-	public static void main(String[] args) {
-
-		new Controller();
-
-	}
+		public void Exit() {
+			
+			System.out.println("Exit");
+			
+			Menu();
+			
+		}
+		public static void main(String[] args) {
+	
+			new Controller();
+	
+		}
 	
 
 }
