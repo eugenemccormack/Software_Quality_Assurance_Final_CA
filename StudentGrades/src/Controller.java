@@ -14,8 +14,7 @@ public class Controller {
 	public Controller() {
 		
 		
-		Menu();			
-		
+		Menu();				
 		
 
 	}
@@ -24,7 +23,7 @@ public class Controller {
 		
 		int option = 0;
 		
-		System.out.println("Welcome to the Student Rubric Creator \n");
+		System.out.println("\nWelcome to the Student Rubric Creator \n");
 		
 		System.out.println("1. Create New Student Rubric");
 		System.out.println("2. View All Rubric's");
@@ -293,6 +292,8 @@ public class Controller {
 							maxGrade(student.getSubject().getRubric());
 							
 							minGrade(student.getSubject().getRubric());
+							
+							standardDeviation(student.getSubject().getRubric());
 					}
 				}
 			
@@ -368,16 +369,45 @@ public class Controller {
 				
 			}
 			
-			System.out.println("Minimum Grade " + Collections.min(minimum) + "\n");		
+			System.out.println("Minimum Grade " + Collections.min(minimum));		
 						
 			return Collections.min(minimum);
+						
+		}
+		
+		public double standardDeviation(ArrayList<Rubric> rubrics){
+			
+			ArrayList<Integer> deviation = new ArrayList<>();
+			
+			double sd = 0.0;
+			int sum = 0;
+			
+			for(Rubric rubric : rubrics) {
+				
+				deviation.add(rubric.getGrade());
+			}
+			
+			sum = deviation.stream().mapToInt(Integer::intValue).sum();
+			
+			double mean = sum / deviation.size();
+			
+			for(double number : deviation) {
+				
+				sd += Math.pow(number - mean, 2);				
+			}			
+						
+			System.out.println("Standard Deviation : " + Math.sqrt(sd/deviation.size()) + "\n");		
+						
+			return Math.sqrt(sd/deviation.size());
 						
 		}
 	
 		
 		public void Exit() {
-			
+	
 			System.out.println("Goodbye!!");
+			
+			System.exit(0);
 
 			
 		}
