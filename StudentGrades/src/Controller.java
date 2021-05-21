@@ -279,9 +279,13 @@ public class Controller {
 							
 							System.out.println("\nStudent Name : " + student.getName());
 							System.out.println("Student Number : " + student.getStudentNumber() + "\n");
+							
+							totalGrade(student.getSubject().getRubric());
 						
 							averageGrade(student.getSubject().getRubric());
+							
 							maxGrade(student.getSubject().getRubric());
+							
 							minGrade(student.getSubject().getRubric());
 					}
 				}
@@ -295,6 +299,23 @@ public class Controller {
 			Menu();
 
 			
+		}
+		
+		public int totalGrade(ArrayList<Rubric> rubrics){
+			
+			int total = 0;
+			
+			for(Rubric rubric : rubrics) {
+				
+				total += rubric.getGrade();
+				
+			}
+			
+			System.out.println("Total Grade " + total + "\n");
+			
+						
+			return total;
+						
 		}
 		
 		public int averageGrade(ArrayList<Rubric> rubrics){
