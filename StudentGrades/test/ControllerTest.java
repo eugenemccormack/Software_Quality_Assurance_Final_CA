@@ -91,5 +91,26 @@ class ControllerTest {
 		assertEquals(1, controller.minGrade(rubricTest));
 				
 	}
+	
+	@Test
+	void standardDeviationTest() {
+
+		ArrayList<Rubric> rubricTest = new ArrayList<>();
+		
+		Controller controller = new Controller();
+		
+		Rubric rubric1 = new Rubric("testing", 3);
+		
+		Rubric rubric2 = new Rubric("design", 4);
+		
+		Rubric rubric3 = new Rubric("documentation", 5);
+		
+		rubricTest.add(rubric1);
+		rubricTest.add(rubric2);
+		rubricTest.add(rubric3);
+		
+		assertEquals(0.816496580927726, controller.standardDeviation(rubricTest));
+				
+	}
 
 }
