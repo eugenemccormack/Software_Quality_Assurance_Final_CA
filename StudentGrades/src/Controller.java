@@ -280,6 +280,12 @@ public class Controller {
 							System.out.println("\nStudent Name : " + student.getName());
 							System.out.println("Student Number : " + student.getStudentNumber() + "\n");
 							
+							for(int i = 0; i < student.getSubject().getRubric().size(); i++) {				
+								
+								System.out.println("Criteria : " + student.getSubject().getRubric().get(i).getCriteriaName());
+								System.out.println("Grade : " + student.getSubject().getRubric().get(i).getGrade() + "\n");														
+							}
+							
 							totalGrade(student.getSubject().getRubric());
 						
 							averageGrade(student.getSubject().getRubric());
@@ -328,7 +334,7 @@ public class Controller {
 				
 			}
 			
-			System.out.println("Average Grade " + total / rubrics.size() + "\n");
+			System.out.println("Average Grade " + total / rubrics.size());
 			
 			int average = total / rubrics.size();
 			
@@ -346,7 +352,7 @@ public class Controller {
 				
 			}
 			
-			System.out.println("Maximum Grade " + Collections.max(maximum) + "\n");		
+			System.out.println("Maximum Grade " + Collections.max(maximum));		
 						
 			return Collections.max(maximum);
 						
