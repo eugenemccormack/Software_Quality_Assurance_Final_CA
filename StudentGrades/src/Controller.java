@@ -13,7 +13,7 @@ public class Controller {
 	public Controller() {
 		
 		
-		Menu();		
+		//Menu();		
 
 		
 		
@@ -31,7 +31,7 @@ public class Controller {
 		System.out.println("2. View All Rubric's");
 		System.out.println("3. Find Rubric by Name");
 		System.out.println("4. View Grades Associated with a Specific Rubric");
-		System.out.println("5. View Summary of Student's Grades");
+		System.out.println("5. View Summary of Rubric Grades");
 		System.out.println("6. Exit System");
 		
 		
@@ -46,9 +46,9 @@ public class Controller {
 		option = scan.nextInt();
 
 		
-		if(option < 1 || option > 5) {
+		if(option < 1 || option > 6) {
 			
-			System.out.println("Error - Please Enter a Menu Option Between 1 and 5\n");
+			System.out.println("Error - Please Enter a Menu Option Between 1 and 6\n");
 			
 			Menu();
 			
@@ -78,7 +78,7 @@ public class Controller {
 		
 
 		
-		}while(option <1 && option >5);
+		}while(option <1 && option >6);
 		
 		
 		
@@ -254,18 +254,71 @@ public class Controller {
 	
 		public void Summary() {
 	
-			System.out.println("Summary");
+			System.out.println("| View Student Summary Rubric |\n");
+			
+			boolean subjectFound = false;
+			
+			String subjectStore = "";
+			
+			System.out.println("Please Enter a Subject : \n");
+			
+			String name = scan.next();
+			
+			for(Subject subjectName: subjects) {
+				
+				if(subjectName.getSubjectName().equalsIgnoreCase(name)) {
+					
+					subjectFound = true;
+					
+					subjectStore = name;				
+				}					
+			}								
+					
+					for(Student student: students) {
+						
+						if(student.getSubject().getSubjectName().equalsIgnoreCase(subjectStore)) {
+							
+							System.out.println("\nStudent Name : " + student.getName());
+							System.out.println("Student Number : " + student.getStudentNumber() + "\n");
+						
+							averageGrade(student.getSubject().getRubric());
+					}
+				}
+			
+			
+			if(!subjectFound)
+				
+				System.out.println("\nError - Subject " + name + " was Not Found\n");
+
 			
 			Menu();
+
 			
+		}
+		
+		public int averageGrade(ArrayList<Rubric> rubrics){
+		
+			int total = 0;
+			
+			for(Rubric rubric : rubrics) {
+				
+				total += rubric.getGrade();
+				
+			}
+			
+			System.out.println("Average Grade " + total / rubrics.size() + "\n");
+			
+			int average = total / rubrics.size();
+			
+			return average;
+						
 		}
 	
 		
 		public void Exit() {
 			
-			System.out.println("Exit");
-			
-			Menu();
+			System.out.println("Goodbye!!");
+
 			
 		}
 		public static void main(String[] args) {
