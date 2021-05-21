@@ -32,10 +32,19 @@ For this assignment I used Fibonacci Sequence for Story Point Estimation. The Fi
 <br />
 
 ---
-## <center> Velocity = 34  </center>
+## <center> Velocity </center>
 ---
 
-<br />
+<br/>
+
+Velocity is a measurement of the work that can be completed during a Sprint and is a key metric in Scrum. Velocity is calculated at the end of a Sprint and is summed up by adding up the Points of the User Stories. In the above Sprint, the Velocity of this Sprint = 34. Story Points are created to measure the size, complexity, and length it will take to complete the User Story. 
+
+<br/>
+
+Velocity is a team metric and should only consider the team’s performance and not an individual’s basis. Bug Fixes should also not be account for when calculating Velocity.
+
+
+<br/>
 
 ---
 ## <center> Story Point Reasoning </center>
@@ -43,8 +52,10 @@ For this assignment I used Fibonacci Sequence for Story Point Estimation. The Fi
 
 <br />
 
-As this assignment is not too complex and I have previously implemented some of the above features in past projects this allowed me to provide these estimations. I estimated "Item 5" above "Create Test for Method to Create New Rubric" with a Point Estimation of "3" as I have only conducted a few tests in previous classes. I expect “Item 5” to take longer than "Item 4 - "Implement Method to Create New Rubric" with a Point Estimation of "2" as I have previously implanted this feature before and am confident this should not take as long . I suspect the main tasks that will take the longest are the tasks that I am somewhat unfamiliar with.
+As this assignment is not too complex and I have previously implemented some of the above features in past projects this allowed me to provide these estimations. I estimated "Item 5" above "Create Test for Method to Create New Rubric" with a Point Estimation of "3" as I have only conducted a few JUnit tests previously. I expect “Item 5” to take longer than "Item 4 - "Implement Method to Create New Rubric" with a Point Estimation of "2" as I have previously implanted this feature before and am confident this should not take as long. I suspect the main tasks that will take the longest are the tasks that I am somewhat unfamiliar with e.g. Testing.
 
 <br />
 
-Also I estimated  “Item 13 - Implement Method to Retrieve All Student's Grades and Display Standard Deviation of Grades” with a Point Estimation of “3” as I am unsure how this will pan out. In contrast “Item 14 - Implement Method to Retrieve All Student's Grades and Display Max / Min Grade” with a Point Estimation of “1” should not take too long as this should be a simple call of Max/Min to the ArrayList items. 
+Also I estimated  “Item 13 - Implement Method to Retrieve All Student's Grades and Display Standard Deviation of Grades” with a Point Estimation of “3” as I am unsure how this will pan out. In contrast “Item 14 - Implement Method to Retrieve All Student's Grades and Display Max / Min Grade” with a Point Estimation of “1” should not take too long as this should be a simple call of Max/Min to the ArrayList items / Collections. 
+
+<br/>
